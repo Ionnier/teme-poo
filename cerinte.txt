@@ -1,0 +1,101 @@
+Proiect 1
+
+Cerinte comune tuturor temelor:
+• implementare in C++ folosind clase
+• datele membre private
+• ATENTIE: functiile pe care le-am numit mai jos metode (fie ca sunt supraincarcari de
+operatori, fie altfel de functii), pot fi implementate ca functii prieten in loc de metode ale claselor
+respective, daca se considera ca aceasta alegere este mai naturala;
+• supraincarcarea operatorilor << si >> pentru iesiri si intrari de obiecte, dupa indicatiile de
+mai jos, astfel incat sa fie permise (si ilustrate in program):
+• sa existe o metoda publica prin care se realizeaza citirea informațiilor complete a n obiecte,
+memorarea și afisarea acestora.
+• programul sa aiba un meniu interactiv
+Necesar: programul sa nu contina erori de compilare si sa ruleze in CodeBlocks
+
+
+Tema 15.
+D6 Clasa "matrice" (matrice de double), avand:
+- membri privati pentru matricea propriuzisa, numarul de linii si numarul de coloane;
+- constructor pentru initializarea cu un numar dat pe toate componentele (primeste ca
+parametru numarul respectiv si numarul de linii si de coloane);
+- constructori pentru initializare si copiere;
+- metode publice pentru citire si afisare;
+- metoda-operator public de atribuire =;
+- metoda publica pentru reactualizarea numarului de linii si coloane si initializarea
+componentelor cu un numar dat (primeste ca parametru numarul respectiv, numarul liniilor si al
+coloanelor);
+- operatori friend: + (suma), - (diferenta), * (produsul dintre doua matrici si dintre o matrice si un
+intreg), == (testarea egalitatii),
+- functii friend "nrlinii", "nrcoloane", "nrelemente" care furnizeaza numarul liniilor, coloanelor,
+respectiv elementelor matricii;
+Program pentru rezolvarea unei ecuatii matriciale de forma "A*X+B=0" (A,B,X,0 sunt matrici).
+
+
+Proiect 2
+
+Cerințe comune tuturor temelor (barem):
+1. Toate clasele vor conține obligatoriu constructori de inițializare (0.25p), parametrizați (0.25p)
+și de copiere (0.25p); destructor (0.25p); operatorii „=” (0.5p), „>>” (0.5p), „<<” (0.5p)
+supraîncărcați corespunzător, moșteniri & encapsulare (0.5p)
+2. Clasele derivate trebuie sa contina constructori parametrizati (prin care sa se evidentieze
+transmiterea parametrilor catre constructorul din clasa de baza) si destructori. (1p)
+3. În fiecare proiect vor fi ilustrate conceptele de upcasting, downcasting, funcții virtuale (pure
+– unde se consideră mai natural) – 1.5p (0.5p / cerință)
+4. Utilizarea de variabile și de funcții statice – 1p
+5. Citirea informațiilor complete a n obiecte, memorarea și afișarea acestora – 0.5p
+6. Meniu interactiv – 0.5p
+7. Rezolvarea corectă a cerințelor suplimentare corespunzatoare fiecarei teme – 1.5p.
+
+Tema 8. Să se definească clasa Contract care conține membrii privați
+- nrContract (numar contract)
+- anul (anul semnarii contractului de cumparare)
+- beneficiar (numele cumparatorului/beneficiarului)
+- furnizor (nume vanzator/ofertant/furnizor)
+- valoare (valoarea totala a produsului)
+Să se deriveze clasa ContractInchiriere din Contract având în plus ca membru privat
+- perioada (perioada contractului exprimata in numar luni)
+Definiti clasa Dosar care contine un vector de pointeri la obiecte de tip ContractInchiriere si un numar
+de contracte de inchiriere.
+Se citesc contractele din dosar, se afiseaza si se cere sa se calculeze valoarea incasata pentru fiecare
+contract in functie de perioada, respectiv valoarea totala incasata.
+
+
+Proiect 3
+
+Cerințe comune tuturor temelor:
+1. utilizarea sabloanelor
+2. utilizarea STL
+3. utilizarea variabilelor, funcțiilor statice, constantelor și a unei functii const
+4. utilizarea conceptelor de RTTI raportat la templat-uri (ex: upcast & dynamic_cast)
+5. tratarea excepțiilor
+6. citirea informațiilor complete a n obiecte, memorarea și afișarea acestora
+
+cerințe generale aplicate fiecărei teme din acest fișier:
+- să se identifice și să se implementeze ierarhia de clase;
+- clasele să conțină constructori, destructori, =, supraincarcare pe >> si << pentru citire si
+afisare;
+- clasa de baza sa conțină funcție virtuala de afisare si citire, rescrisa în clasele derivate, iar
+operatorul de citire si afisare să fie implementat ca funcție prieten (în clasele derivate să
+se facă referire la implementarea acestuia în clasa de baza).
+
+
+Tema 3. La facultatea Y studenții intra în sesiune. În regulament e prevăzut că ei sa aibă un
+anumit număr de examene. Fiecare examen are un număr, incrementat automat, denumirea
+materiei data și nota la scris. Partialul conține și nota la oral, iar examenul final conține extra-
+puncte pe un proiect. Dacă partialul nu e luat, atunci se reface la examenul final, altfel, se
+păstrează nota. Cei care vor să-si mareasca nota, mai dau un quiz, conținând un număr de
+itemi de tip grila.
+Structura de date: unordered_set sau unordered_map <id_examen, vector<elev>> (se rețin
+elevii care nu au trecut examenul cu id-ul id_examen)
+Cerința suplimentară:
+- Să se adauge toate campurile relevante pentru modelarea acestei probleme.
+- Să se construiască clasa template CatalogIndividual care sa conțină informații despre tipurile
+de examene date de un student. Clasa conține nr matricol al studentului (incrementat
+automat la adaugarea unei noi file), nr_examene și structura de obiecte. Sa se supraincarce
+operatorul += pentru inserarea unei fișe de observație a unui examen în structura.
+- Să se construiască o specializare pentru tipul Quizz care sa adapteze operatorii menționați și
+care sa afiseze, în plus, cate persoane au dat cel puțin 2 quizz-uri.
+
+
+
